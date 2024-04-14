@@ -43,7 +43,7 @@ const CustomModal = ({ CloseModelHandler, setIsModel2 }) => {
     if (name && email && phone) {
       setIsloading(true);
       try {
-        const response = await fetch("/api/form", {
+        const response = await fetch("/api", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

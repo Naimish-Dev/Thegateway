@@ -7,12 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        slg: "950px",
       },
     },
   },
   plugins: [],
 };
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 70

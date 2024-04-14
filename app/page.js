@@ -1,113 +1,464 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { FaList } from "react-icons/fa";
+import CustomModal from "./Component/CustomModal";
+import FromSubmit from "./Component/CustomModal/FromSubmit";
+import { LiaHotelSolid } from "react-icons/lia";
+import { LiaHospitalSolid } from "react-icons/lia";
+import { FaGraduationCap } from "react-icons/fa";
+import { GiShop } from "react-icons/gi";
 
 export default function Home() {
+  const mainSidebar = useRef();
+  const openSidebarButton = useRef();
+
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
+
+  useEffect(() => {
+    const handleEscapeKey = (e) => {
+      if (e.key === "Escape" || e.keyCode === 27) {
+        setIsSidebarActive(false);
+      }
+    };
+
+    const handleOutsideClick = (e) => {
+      if (
+        !mainSidebar.current.contains(e.target) &&
+        !openSidebarButton.current.contains(e.target)
+      ) {
+        setIsSidebarActive(false);
+      }
+    };
+
+    const windoscroll = () => {
+      setIsSidebarActive(false);
+    };
+
+    window.addEventListener("keydown", handleEscapeKey);
+    window.addEventListener("click", handleOutsideClick);
+    window.addEventListener("scroll", windoscroll);
+    return () => {
+      window.removeEventListener("keydown", handleEscapeKey);
+      window.removeEventListener("click", handleOutsideClick);
+      window.removeEventListener("scroll", windoscroll);
+    };
+  }, []);
+
+  const [isModel, setIsModel] = useState(false);
+  const [isModel2, setIsModel2] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsModel(true);
+      window.scrollTo(0, 0);
+    }, 2000);
+  }, []);
+
+  const handleDownload = () => {
+    const pdfUrl = "/assets/docs/LT-Realty-The-Gateway-Sewri-EBrochure";
+
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "First Forest-Living in Dubai MAF.pdf";
+    link.target = "_blank";
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+  };
+
+  const CloseModelHandler = () => {
+    setIsModel(false);
+  };
+  const CloseSucessModelHandler = () => {
+    setIsModel2(false);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <section>
+      <div className="relative">
+        <div
+          className={`absolute bg-[rgba(0,0,0,0.3)] z-20  min-h-screen w-full top-0 transition-transform transform ease-in-out duration-300 lg:hidden ${
+            isSidebarActive ? `translate-x-0` : "-translate-x-full"
+          }`}
+          id="sidebar"
+        >
+          <div
+            ref={mainSidebar}
+            id="main-sidebar"
+            className="bg-[#152D7A] text-white w-[320px] min-h-screen"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+            <div className="pr-4 text-xl text-right">
+              <i
+                id="close-sidebar"
+                className="p-1 cursor-pointer fa fa-times"
+                aria-hidden="true"
+              ></i>
+            </div>
+            <div className="px-4">
+              <h1 className="pb-6 text-3xl font-semibold text-center border-b border-peime">
+                <div className="w-full py-2">
+                  <Image
+                    src={"/assets/logo/TheGatewaylogo.png"}
+                    alt="logo"
+                    className="mx-auto"
+                    width={150}
+                    height={150}
+                  />
+                </div>
+              </h1>
+              <ul className="mt-6">
+                <Link href="../#about">
+                  <li className="my-2 p-2 font-bold rounded-sm  transition-all duration-300 hover:translate-x-2 hover:bg-white hover:text-[#7B4749]">
+                    About
+                  </li>
+                </Link>
+
+                <Link href="../#location">
+                  <li className="my-2 p-2 font-bold rounded-sm  transition-all duration-300 hover:translate-x-2 hover:bg-white hover:text-[#7B4749]">
+                    Location
+                  </li>
+                </Link>
+                <Link href="../#size-prices">
+                  <li className=" my-2 p-2 font-bold rounded-sm  transition-all duration-300 hover:translate-x-2 hover:bg-white hover:text-[#7B4749]">
+                    Size & Prices
+                  </li>
+                </Link>
+                <Link href="../#amenities">
+                  <li className="my-2 p-2 font-bold rounded-sm  transition-all duration-300 hover:translate-x-2 hover:bg-white hover:text-[#7B4749]">
+                    Amenities
+                  </li>
+                </Link>
+                <Link href="../#agllery">
+                  <li className="my-2 p-2 font-bold rounded-sm  transition-all duration-300 hover:translate-x-2 hover:bg-white hover:text-[#7B4749]">
+                    Gallery
+                  </li>
+                </Link>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="fixed z-10 top-0 left-0 w-screen text-white bg-black/50 py-4 px-2 bg-opacity-30">
+          <div className="flex justify-between items-center ">
+            <img src="/assets/logo/L&Tlogo.jpeg" className="h-10" />
+            <div className=" gap-4 font-medium hidden sm:flex">
+              <Link
+                className=" hover:font-bold transition-all duration-300"
+                href={"../#about"}
+              >
+                About
+              </Link>
+              <Link
+                className=" hover:font-bold transition-all duration-300"
+                href={"../#location"}
+              >
+                Location
+              </Link>
+              <Link
+                className=" hover:font-bold transition-all duration-300"
+                href={"../#size-prices"}
+              >
+                Size & Prices
+              </Link>
+              <Link
+                className=" hover:font-bold transition-all duration-300"
+                href={"../#amenities"}
+              >
+                Amenities
+              </Link>
+              <Link
+                className=" hover:font-bold transition-all duration-300"
+                href={"../#gallery"}
+              >
+                Gallery
+              </Link>
+            </div>
+
+            <button
+              ref={openSidebarButton}
+              className="px-4 text-2xl font-bold sm:hidden "
+              id="open-sidebar"
+              onClick={() => setIsSidebarActive(true)}
+            >
+              <FaList />
+            </button>
+            <img
+              src="/assets/logo/TheGatewaylogo.png"
+              className="h-10 mr-4 hidden sm:block "
             />
-          </a>
+          </div>
+        </div>
+
+        <video
+          className="w-screen min-h-[500px] max-h-screen object-fill hidden slg:block"
+          loop
+          muted
+          autoPlay
+        >
+          <source src="/assets/video/bg-video.mp4" type="video/mp4" />
+          <track
+            src="/path/to/captions.vtt"
+            kind="subtitles"
+            srcLang="en"
+            label="English"
+          />
+        </video>
+
+        <div className="slg:hidden relative">
+          <img
+            src="/assets/video/bg-mobile.jpg"
+            className=" w-full h-screen aspect-square object-cover "
+          />
+          <div className="absolute top-0 left-0 w-full h-full bg-black/30 "></div>
+        </div>
+
+        <div className="absolute top-0 left-0 w-full h-full  flex justify-center items-center gap-4 ">
+          <div className="text-center text-white font-bold mt-32 slg:mt-36 ">
+            <div className="mx-2">
+              <h2 className="text-2xl">
+                WHERE THE ENDLESS OCEAN MEETS AN <br />
+                ARCHITECTURAL MASTERPIECE
+              </h2>
+              <div>
+                <div className="flex  flex-wrap justify-center gap-x-3 sm:gap-5">
+                  <button
+                    onClick={() => {
+                      const token = sessionStorage.getItem("Token");
+                      if (token) {
+                        handleDownload();
+                      } else {
+                        setIsModel(true);
+                      }
+                    }}
+                    className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out   text-white bg-blue-800 text-sm font-extrabold leading-5 tracking-[0.21px]"
+                  >
+                    Download Broucher
+                  </button>
+                  <button
+                    onClick={() => setIsModel(true)}
+                    className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out text-gray-900 bg-[#DBDFD7] text-sm font-extrabold leading-5 tracking-[0.21px]"
+                  >
+                    Show your Interest
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {isModel && !isModel2 && (
+          <CustomModal
+            CloseModelHandler={CloseModelHandler}
+            setIsModel2={setIsModel2}
+          ></CustomModal>
+        )}
+        {!isModel && isModel2 && (
+          <FromSubmit
+            CloseSucessModelHandler={CloseSucessModelHandler}
+          ></FromSubmit>
+        )}
+      </div>
+      <div className="flex justify-center items-center my-10">
+        <div className="text-center flex flex-col justify-center items-center">
+          <h2 className="text-xl font-semibold">Size & Prices</h2>
+          <table>
+            <thead>
+              <tr className="bg-blue-800 text-white font-semibold uppercase ">
+                <th class="px-5 py-3 border-e-2 border-white">Type</th>
+                <th className="px-5  border-e-2 py-3">
+                  Total RERA area (sq.ft & m2)
+                </th>
+                <th className="px-5 py-3" colspan="2">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody className="font-semibold">
+              <tr>
+                <td className={`px-5 py-2 text-sm`}>3 BHK City </td>
+                <td className={`px-5 py-2 text-sm `}>1258.3 Sq.ft. </td>
+                <td className={`px-5 py-2 text-sm `}>₹ 5.70 Cr* +</td>
+                <td className={`px-5 py-2 text-sm `}>
+                  <button
+                    onClick={() => {
+                      const token = sessionStorage.getItem("Token");
+                      if (token) {
+                        handleDownload();
+                        window.scrollTo(0, 0);
+                      } else {
+                        window.scrollTo(0, 0);
+                        setIsModel(true);
+                      }
+                    }}
+                  >
+                    Enquire Now
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td className={`px-5 py-2 text-sm`}>3 BHK Sea</td>
+                <td className={`px-5 py-2 text-sm `}>1444.9 Sq.ft. </td>
+                <td className={`px-5 py-2 text-sm `}>₹ 6.75 Cr* + </td>
+                <td className={`px-5 py-2 text-sm `}>
+                  <button
+                    onClick={() => {
+                      const token = sessionStorage.getItem("Token");
+                      if (token) {
+                        handleDownload();
+                        window.scrollTo(0, 0);
+                      } else {
+                        window.scrollTo(0, 0);
+                        setIsModel(true);
+                      }
+                    }}
+                  >
+                    Enquire Now
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td className={`px-5 py-2 text-sm`}>4 BHK</td>
+                <td className={`px-5 py-2 text-sm `}>1905.1 Sq.ft.</td>
+                <td className={`px-5 py-2 text-sm `}>₹ 9.07 Cr* + </td>
+                <td className={`px-5 py-2 text-sm `}>
+                  <button
+                    onClick={() => {
+                      const token = sessionStorage.getItem("Token");
+                      if (token) {
+                        handleDownload();
+                        window.scrollTo(0, 0);
+                      } else {
+                        window.scrollTo(0, 0);
+                        setIsModel(true);
+                      }
+                    }}
+                  >
+                    Enquire Now
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td className={`px-5 py-2 text-sm`}>4.5 BHK</td>
+                <td className={`px-5 py-2 text-sm `}>2251.5 Sq.ft.</td>
+                <td className={`px-5 py-2 text-sm `}>₹ 11 Cr* + </td>
+                <td className={`px-5 py-2 text-sm `}>
+                  <button
+                    onClick={() => {
+                      const token = sessionStorage.getItem("Token");
+                      if (token) {
+                        handleDownload();
+                        window.scrollTo(0, 0);
+                      } else {
+                        window.scrollTo(0, 0);
+                        setIsModel(true);
+                      }
+                    }}
+                  >
+                    Enquire Now
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="flex justify-center items-center my-10">
+        <div className="text-center flex flex-col justify-center items-center">
+          <h2 className="text-xl font-semibold">Rera Number</h2>
+          <p className="font-medium">The Gateway – P51900054969</p>
+          <img
+            src="/assets/docs/RERA-P51900054969-The-Gateway.webp"
+            className="w-[200px] h-auto"
+            alt="imges"
+          />
+        </div>
       </div>
+      <div className="flex justify-center items-center px-2 py-8 my-10 bg-[#D6CDBE]">
+        <div className="w-full">
+          <h2 className="text-3xl font-bold mb-8 text-center">Location </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-6">
+            <div
+              className="w-full"
+              onClick={() => {
+                setIsModel(true), window.scrollTo(0, 0);
+              }}
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15089.679881231741!2d72.853988!3d19.001207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfb19bcaa7f9%3A0x7e82e2d83a779a90!2sL%26T%20Realty%20The%20Gateway%2C%20Sewri!5e0!3m2!1sen!2sin!4v1713094315942!5m2!1sen!2sin"
+                className=" w-full h-full min-h-[300px]"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <div className="grid grid-cols-2  gap-6 justify-between">
+              <div>
+                <h4 className="text-xl font-bold  flex gap-2 mb-3  items-center">
+                  <img
+                    src="/assets/location-icon/hotel_353893.png"
+                    className="w-10 h-10"
+                  />
+                  5 Star Hotels
+                </h4>
+                <div className="font-semibold  flex flex-col gap-1">
+                  <div>ITC Grand Central - 2 Km</div>
+                  <div>The St. Regis - 4 Km</div>
+                  <div>Four Seasons - 5 Km</div>
+                  <div>The Taj Mahal Palace - 9.7 Km</div>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold  flex gap-2 mb-3  items-center">
+                  <img
+                    src="/assets/location-icon/office_13161350.png"
+                    className="w-10 h-10"
+                  />{" "}
+                  Hospitals
+                </h4>
+                <div className="font-semibold  flex flex-col gap-1">
+                  <div>KEM Hospital - 1.5 Km</div>
+                  <div>TATA Memorial Hospital - 1.8 Km</div>
+                  <div>Global Hospital - 1.7 Km</div>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold  flex gap-2 mb-3  items-center">
+                  <img
+                    src="/assets/location-icon/bus_14063504.png"
+                    className="w-10 h-10"
+                  />{" "}
+                  Education Institutes
+                </h4>
+                <div className="font-semibold  flex flex-col gap-1">
+                  <div>Don Bosco High School – 1 Km</div>
+                  <div>JCBN international School – 1.2 Km</div>
+                  <div>Ruia College – 2 Km</div>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold  flex gap-2 mb-3  items-center">
+                  <img
+                    src="/assets/location-icon/store_6030583.png"
+                    className="w-10 h-10"
+                  />{" "}
+                  Shopping Destinations
+                </h4>
+                <div className="font-semibold  flex flex-col gap-1">
+                  <div>Palladium - 5.5 Km</div>
+                  <div>Phoneix Market City - 13 Km</div>
+                  <div>Atria Mall - 7 Km</div>
+                  <div>CR2 - 10.5 Km</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
   );
 }

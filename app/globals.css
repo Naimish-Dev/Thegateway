@@ -31,3 +31,32 @@ body {
     text-wrap: balance;
   }
 }
+
+.model-blur {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.model-blur2 {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input{
+   -webkit-text-fill-color: black;
+
+       caret-color: black;
+
+}
+tbody tr:nth-child(even) {
+  background-color:rgba(0, 0, 0, 0.2); /* or any other color you prefer */
+}
+
+* {
+  scroll-behavior: smooth;
+}

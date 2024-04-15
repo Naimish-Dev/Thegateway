@@ -156,7 +156,7 @@ const CustomModal = ({ CloseModelHandler, setIsModel2 }) => {
             <div className="flex flex-col w-[80%] sm:w-[70%] mt-3">
               <button
                 disabled={isloading}
-                className="rounded-full px-3.5 py-3 bg-[#2b8761] text-white text-sm font-medium leading-5 tracking-[0.21px]"
+                className="rounded-full px-3.5 py-3 bg-blue-800 text-white text-sm font-medium leading-5 tracking-[0.21px]"
                 onClick={stopPropagation}
               >
                 {isloading ? (

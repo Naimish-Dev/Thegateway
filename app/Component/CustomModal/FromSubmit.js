@@ -32,11 +32,11 @@ const FromSubmit = ({ CloseSucessModelHandler,isModelsucess }) => {
   }, [CloseSucessModelHandler]);
 
   const handleDownload = () => {
-    const pdfUrl = "/assets/First-Forest-Living-in-Dubai-MAF.pdf";
+    const pdfUrl = "/assets/docs/LT-Realty-The-Gateway-Sewri-EBrochure.pdf";
 
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "First Forest-Living in Dubai MAF.pdf";
+    link.download = "The-Gateway-Sewri-EBrochure.pdf";
     link.target = "_blank";
 
     document.body.appendChild(link);
@@ -48,7 +48,7 @@ const FromSubmit = ({ CloseSucessModelHandler,isModelsucess }) => {
   return (
     <div
       ref={model2}
-      className={` absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[99] px-4 ${
+      className={` absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[99] px-8 ${
         isModelsucess
           ? "model-blur2 w-[350px] md:w-full lg:w-[350px]"
           : "model-blur w-[350px] sm:w-fit "
@@ -82,7 +82,7 @@ const FromSubmit = ({ CloseSucessModelHandler,isModelsucess }) => {
           <div className="text-sm font-semibold text-center text-white sm:text-base">
             Call us if you have any questions:
             <Link
-              className="mt-2 font-semibold text-center text-sm sm:text-base text-[#2B8761]"
+              className="mt-2 font-semibold text-center text-sm sm:text-base "
               href={`tel:+971506945852`}
             >
               &nbsp; +971506945852

@@ -45,7 +45,7 @@ const ContactImfo = () => {
     setIsModel2(false);
   };
   return (
-    <div >
+    <div>
       <Title> Ghaf Woods</Title>
       <div className="flex flex-col w-full md:flex-row py-14">
         <div className="w-full h-[560px]">
@@ -127,7 +127,7 @@ const ContactImfo = () => {
               <button
                 disabled={isloading}
                 onClick={handleSubmit}
-                className="rounded-full px-3.5 py-3 bg-[#2b8761] text-white text-sm font-medium leading-5 tracking-[0.21px]"
+                className="rounded-full px-3.5 py-3 bg-blue-800 text-white text-sm font-medium leading-5 tracking-[0.21px]"
               >
                 {isloading ? (
                   <div class="inline-block animate-spin rounded-full h-4 w-4 border-x-2 border-b-2 border-white"></div>
@@ -135,12 +135,6 @@ const ContactImfo = () => {
                   "Submit"
                 )}
               </button>
-              <Link
-                className="mt-2 font-semibold text-center text-[#2B8761]"
-                href="/Privacy-Policy"
-              >
-                Privacy Policy!
-              </Link>
             </div>
           </form>
         </div>

@@ -58,11 +58,11 @@ export default function Home() {
   }, []);
 
   const handleDownload = () => {
-    const pdfUrl = "/assets/docs/LT-Realty-The-Gateway-Sewri-EBrochure";
+    const pdfUrl = "/assets/docs/LT-Realty-The-Gateway-Sewri-EBrochure.pdf";
 
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "First Forest-Living in Dubai MAF.pdf";
+    link.download = "The-Gateway-Sewri-EBrochure.pdf";
     link.target = "_blank";
 
     document.body.appendChild(link);
@@ -285,14 +285,7 @@ export default function Home() {
                 <td className={`px-2 sm:px-5 py-2 text-sm hidden sm:block`}>
                   <button
                     onClick={() => {
-                      const token = sessionStorage.getItem("Token");
-                      if (token) {
-                        handleDownload();
-                        window.scrollTo(0, 0);
-                      } else {
-                        window.scrollTo(0, 0);
-                        setIsModel(true);
-                      }
+                      window.scrollTo(0, 0), setIsModel(true);
                     }}
                   >
                     Enquire Now
@@ -306,14 +299,7 @@ export default function Home() {
                 <td className={`px-2 sm:px-5 py-2 text-sm  hidden sm:block`}>
                   <button
                     onClick={() => {
-                      const token = sessionStorage.getItem("Token");
-                      if (token) {
-                        handleDownload();
-                        window.scrollTo(0, 0);
-                      } else {
-                        window.scrollTo(0, 0);
-                        setIsModel(true);
-                      }
+                      window.scrollTo(0, 0), setIsModel(true);
                     }}
                   >
                     Enquire Now
@@ -327,14 +313,7 @@ export default function Home() {
                 <td className={`px-2 sm:px-5 py-2 text-sm hidden sm:block`}>
                   <button
                     onClick={() => {
-                      const token = sessionStorage.getItem("Token");
-                      if (token) {
-                        handleDownload();
-                        window.scrollTo(0, 0);
-                      } else {
-                        window.scrollTo(0, 0);
-                        setIsModel(true);
-                      }
+                      window.scrollTo(0, 0), setIsModel(true);
                     }}
                   >
                     Enquire Now
@@ -348,14 +327,7 @@ export default function Home() {
                 <td className={`px-2 sm:px-5 py-2 text-sm  hidden sm:block`}>
                   <button
                     onClick={() => {
-                      const token = sessionStorage.getItem("Token");
-                      if (token) {
-                        handleDownload();
-                        window.scrollTo(0, 0);
-                      } else {
-                        window.scrollTo(0, 0);
-                        setIsModel(true);
-                      }
+                      window.scrollTo(0, 0), setIsModel(true);
                     }}
                   >
                     Enquire Now

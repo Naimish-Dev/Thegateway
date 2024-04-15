@@ -17,7 +17,7 @@ export async function POST(request) {
 
     const spreadsheetId = process.env.SPREAD_SHEET_ID;
 
-    const range = "sheet1!B1:D1";
+    const range = "Lead sheet - Gateway!B1:D1";
 
     const values = [["", name, email, phone]];
 

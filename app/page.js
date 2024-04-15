@@ -144,8 +144,8 @@ export default function Home() {
         </div>
         <div className="fixed z-10 top-0 left-0 w-screen text-white bg-black/50 py-4 px-2 bg-opacity-30">
           <div className="flex justify-between items-center ">
-            <img src="/assets/logo/L&Tlogo.jpeg" className="h-10" />
-            <div className=" gap-4 font-medium hidden sm:flex">
+            <img src="/assets/logo/logo.png" className="h-10" />
+            <div className=" gap-4 font-medium hidden sm:flex mr-2">
               <Link
                 className=" hover:font-bold transition-all duration-300"
                 href={"../#about"}
@@ -186,10 +186,6 @@ export default function Home() {
             >
               <FaList />
             </button>
-            <img
-              src="/assets/logo/TheGatewaylogo.png"
-              className="h-10 mr-4 hidden sm:block "
-            />
           </div>
         </div>
 
@@ -210,7 +206,7 @@ export default function Home() {
 
         <div className="slg:hidden relative">
           <img
-            src="/assets/video/bg-mobile.jpg"
+            src="/assets/video/Mobile-Masthead-The-Gateway-Sewri-IMG-3.webp"
             className=" w-full h-screen aspect-square object-cover "
           />
           <div className="absolute top-0 left-0 w-full h-full bg-black/30 "></div>

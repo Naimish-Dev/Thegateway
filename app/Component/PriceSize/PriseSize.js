@@ -3,7 +3,7 @@ import React from "react";
 const PriseSize = ({ setIsModel }) => {
   return (
     <div
-      className="flex justify-center items-centerpy-10 md:py-16 bg-[#D6CDBE]"
+      className="flex justify-center items-centerpy-10 py-10 md:py-16 bg-[#D6CDBE]"
       id="size-prices"
     >
       <div className="text-center flex flex-col justify-center items-center">

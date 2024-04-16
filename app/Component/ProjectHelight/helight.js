@@ -3,7 +3,7 @@ import React from "react";
 const Helight = () => {
   return (
     <div
-      className="flex justify-center items-center py-10 md:py-16 bg-[#D6CDBE]"
+      className="flex justify-center items-center px-2 py-10 md:py-16 bg-[#D6CDBE]"
       id="about"
     >
       <div className="text-center flex flex-col justify-center items-center">

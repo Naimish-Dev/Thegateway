@@ -47,23 +47,18 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-input{
-   -webkit-text-fill-color: black;
-
-       caret-color: black;
-
+input {
+  -webkit-text-fill-color: black;
+  caret-color: black;
+  font-family: sans-serif;
 }
 tbody tr:nth-child(even) {
-  background-color:rgba(0, 0, 0, 0.2); /* or any other color you prefer */
+  background-color: rgba(0, 0, 0, 0.2); /* or any other color you prefer */
 }
 
 * {
   scroll-behavior: smooth;
 }
-
-
-
-
 
 .navigation-wrapper {
   position: relative;

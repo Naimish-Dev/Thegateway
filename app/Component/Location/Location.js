@@ -2,9 +2,13 @@ import React from 'react'
 
 const Location = ({ setIsModel }) => {
   return (
-    <div className="flex justify-center items-center px-2 py-8 my-10 bg-[#D6CDBE]">
+    <div className="flex justify-center items-center px-2 py-10 md:py-16 bg-[#D6CDBE]">
       <div className="w-full">
-        <h2 className="text-3xl font-bold mb-8 text-center">Location</h2>
+        <h2 className="text-3xl font-bold mb-1 text-center">Location</h2>
+        <p className="text-center font-bold  mb-6">
+          Sewri Sales Office Rafi Ahmed Kidwai Rd, Gandhi Nagar, Sewri, Mumbai,
+          Maharashtra 400015
+        </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-6">
           <div
             className="w-full"

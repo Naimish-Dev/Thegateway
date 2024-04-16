@@ -2,9 +2,11 @@ import React from "react";
 
 const Helight = () => {
   return (
-    <div className="flex justify-center items-center my-10 md:my-16">
+    <div className="flex justify-center items-center py-10 md:py-16 bg-[#D6CDBE]">
       <div className="text-center flex flex-col justify-center items-center">
-        <h2 className="text-3xl mb-4 font-semibold">Project Highlights</h2>
+        <h2 className="text-3xl font-semibold">Project Highlights</h2>
+
+        <p className=" mb-4  font-bold"> Where luxury meets connectivity</p>
         <div className="grid grid-cols-1  md:grid-cols-2 gap-4">
           <div className="flex gap-3  items-center font-medium">
             <img

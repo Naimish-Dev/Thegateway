@@ -62,7 +62,7 @@ const Sliderone = () => {
               <div className="relative">
                 <img
                   src="/assets/building/Screenshot2024-02-27171019.png"
-                  className="object-cover w-screen h-[700px] "
+                  className="object-cover w-screen h-[600px] "
                 />
                 <div className="absolute w-full h-full z-1 top-0 left-0 bg-black/40 flex justify-center items-center">
                   <div>
@@ -88,7 +88,7 @@ const Sliderone = () => {
               <div className="relative">
                 <img
                   src="/assets/building/Screenshot2024-02-27171212.png"
-                  className="object-cover w-screen h-[700px]"
+                  className="object-cover w-screen h-[600px]"
                 />
                 <div className="absolute w-full h-full z-1 top-0 left-0 bg-black/40 flex justify-center items-center">
                   <div>
@@ -106,7 +106,7 @@ const Sliderone = () => {
               <div className="relative">
                 <img
                   src="/assets/building/Screenshot2024-02-27171244.png"
-                  className="object-cover w-screen h-[700px]"
+                  className="object-cover w-screen h-[600px]"
                 />
                 <div className="absolute w-full h-full z-1 top-0 left-0 bg-black/40 flex justify-center items-center">
                   <div>
@@ -121,7 +121,7 @@ const Sliderone = () => {
               <div className="relative">
                 <img
                   src="/assets/building/Screenshot2024-02-28124447.png"
-                  className="object-cover w-screen h-[700px]"
+                  className="object-cover w-screen h-[600px]"
                 />
                 <div className="absolute w-full h-full z-1 top-0 left-0 bg-black/40 flex justify-center items-center">
                   <div>

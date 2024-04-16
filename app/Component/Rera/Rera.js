@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const Rera = () => {
@@ -11,6 +12,7 @@ const Rera = () => {
           className="w-[200px] h-auto"
           alt="imges"
         />
+        <Link href="/Privacy-Policy">Privacy Policy</Link>
       </div>
     </div>
   );

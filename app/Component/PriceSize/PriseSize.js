@@ -1,8 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const PriseSize = ({ setIsModel }) => {
   return (
-    <div className="flex justify-center items-centerpy-10 md:py-16 bg-[#D6CDBE]">
+    <div
+      className="flex justify-center items-centerpy-10 md:py-16 bg-[#D6CDBE]"
+      id="size-prices"
+    >
       <div className="text-center flex flex-col justify-center items-center">
         <h2 className="text-3xl  font-semibold">Size & Prices</h2>
         <p className="font-bold  mb-4">Rise to exclusive luxury</p>
@@ -81,4 +84,4 @@ const PriseSize = ({ setIsModel }) => {
   );
 };
 
-export default PriseSize
+export default PriseSize;

@@ -78,7 +78,7 @@ const CustomModal = ({ CloseModelHandler, setIsModel2 }) => {
     <Fragment>
       <div
         ref={model}
-        className="w-[350px] sm:w-fit absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[99] px-4 model-blur rounded-md"
+        className="w-[350px] sm:w-fit fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[99] px-4 model-blur rounded-md"
       >
         <div className="mt-2 ml-2 ">
           <IoClose

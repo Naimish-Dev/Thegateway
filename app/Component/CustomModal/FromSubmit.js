@@ -48,7 +48,7 @@ const FromSubmit = ({ CloseSucessModelHandler,isModelsucess }) => {
   return (
     <div
       ref={model2}
-      className={` absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[99] px-8 ${
+      className={` fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[99] px-8 ${
         isModelsucess
           ? "model-blur2 w-[350px] md:w-full lg:w-[350px]"
           : "model-blur w-[350px] sm:w-fit "

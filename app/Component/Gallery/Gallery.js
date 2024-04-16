@@ -17,7 +17,7 @@ const Gallery = () => {
     "/assets/Gallery/Sewri-Lift-Lobby-IMG-1.jpg",
   ];
   return (
-    <div className="flex justify-center items-center my-10">
+    <div className="flex justify-center items-center my-10" id="gallery">
       <div className="text-center flex flex-col justify-center items-center">
         <h2 className="text-3xl mb-4 font-semibold">Gallery</h2>
         <div className="flex gap-4 flex-wrap justify-between items-center">

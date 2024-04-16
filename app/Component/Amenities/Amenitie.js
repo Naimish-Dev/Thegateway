@@ -2,7 +2,10 @@ import React from "react";
 
 const Amenities = () => {
   return (
-    <div className="flex justify-center items-center py-10 md:py-16 bg-[#D6CDBE]">
+    <div
+      className="flex justify-center items-center py-10 md:py-16 bg-[#D6CDBE]"
+      id="amenities"
+    >
       <div className="text-center flex flex-col justify-center items-center">
         <h2 className="text-3xl font-semibold">Amenities</h2>
         <p className="mb-6  font-bold ">Your gateway to luxury</p>

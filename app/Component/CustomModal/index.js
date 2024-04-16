@@ -166,6 +166,9 @@ const CustomModal = ({ CloseModelHandler, setIsModel2 }) => {
                 )}
               </button>
             </div>
+            <Link className="text-white font-bold" href={"/Privacy-Policy"}>
+              Privacy-Policy
+            </Link>
           </form>
         </div>
       </div>

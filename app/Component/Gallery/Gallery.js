@@ -1,11 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/grid";
 
-import { Autoplay, Grid, Pagination, Navigation } from "swiper/modules";
 
 const Gallery = () => {
   const filterProduct = [

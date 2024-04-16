@@ -10,7 +10,6 @@ import { LiaHotelSolid } from "react-icons/lia";
 import { LiaHospitalSolid } from "react-icons/lia";
 import { FaGraduationCap } from "react-icons/fa";
 import { GiShop } from "react-icons/gi";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import Sliderone from "./Component/SliderOne/sliderone";
 import Rera from "./Component/Rera/Rera";
@@ -18,7 +17,7 @@ import Gallery from "./Component/Gallery/Gallery";
 import Location from "./Component/Location/Location";
 import PriseSize from "./Component/PriceSize/PriseSize";
 import loading from "./loading";
-import Helight from "./Component/Helight/helight";
+import Helight from "./Component/ProjectHelight/helight";
 
 export default function Home() {
   const mainSidebar = useRef();

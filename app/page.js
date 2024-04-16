@@ -210,6 +210,7 @@ export default function Home({ params }) {
             loop
             muted
             autoPlay
+            poster="assets/building/Screenshot2024-02-27171122.png"
           >
             <source src="/assets/video/bg-video.mp4" type="video/mp4" />
             <track

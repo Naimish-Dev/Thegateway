@@ -1,4 +1,5 @@
 import React from "react";
+import GalleryImgPreview from "../GalleryImgPreview/GalleryImgPreview";
 
 
 const Gallery = () => {
@@ -21,7 +22,7 @@ const Gallery = () => {
       <div className="text-center flex flex-col justify-center items-center">
         <h2 className="text-3xl mb-4 font-semibold">Gallery</h2>
         <div className="flex gap-4 flex-wrap justify-between items-center">
-          {filterProduct?.map((item) => (
+          {/* {filterProduct?.map((item) => (
             <img
               src={item}
               alt="sq-sample"
@@ -31,7 +32,8 @@ const Gallery = () => {
                   "https://ucarecdn.com/b035f4fd-d55a-446f-843c-62715ff7f984/-/preview/-/quality/smart/")
               }
             />
-          ))}
+          ))} */}
+          <GalleryImgPreview/>
         </div>
       </div>
     </div>

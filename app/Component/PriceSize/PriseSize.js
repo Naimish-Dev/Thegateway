@@ -3,7 +3,7 @@ import React from "react";
 const PriseSize = ({ setIsModel }) => {
   return (
     <div
-      className="flex justify-center items-centerpy-10 py-10 md:py-16 bg-[#D6CDBE]"
+      className="flex justify-center items-centerpy-10 py-10 md:py-16 bg-[#D6CDBE] dark:text-black"
       id="size-prices"
     >
       <div className="text-center flex flex-col justify-center items-center">
@@ -28,7 +28,7 @@ const PriseSize = ({ setIsModel }) => {
               <td className={`px-2 sm:px-5 py-2 text-sm `}>
                 <button
                   onClick={() => {
-                    window.scrollTo(0, 0), setIsModel(true);
+                    setIsModel(true);
                   }}
                 >
                   Enquire Now
@@ -42,7 +42,7 @@ const PriseSize = ({ setIsModel }) => {
               <td className={`px-2 sm:px-5 py-2 text-sm  `}>
                 <button
                   onClick={() => {
-                    window.scrollTo(0, 0), setIsModel(true);
+                    setIsModel(true);
                   }}
                 >
                   Enquire Now
@@ -56,7 +56,7 @@ const PriseSize = ({ setIsModel }) => {
               <td className={`px-2 sm:px-5 py-2 text-sm `}>
                 <button
                   onClick={() => {
-                    window.scrollTo(0, 0), setIsModel(true);
+                    setIsModel(true);
                   }}
                 >
                   Enquire Now
@@ -70,7 +70,7 @@ const PriseSize = ({ setIsModel }) => {
               <td className={`px-2 sm:px-5 py-2 text-sm `}>
                 <button
                   onClick={() => {
-                    window.scrollTo(0, 0), setIsModel(true);
+                    setIsModel(true);
                   }}
                 >
                   Enquire Now

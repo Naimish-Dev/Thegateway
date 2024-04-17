@@ -3,7 +3,7 @@ import React from "react";
 const Helight = () => {
   return (
     <div
-      className="flex justify-center items-center px-2 py-10 md:py-16 bg-[#D6CDBE]"
+      className="flex justify-center items-center px-2 py-10 md:py-16 bg-[#D6CDBE] dark:text-black"
       id="about"
     >
       <div className="text-center flex flex-col justify-center items-center">
@@ -19,7 +19,7 @@ const Helight = () => {
             />
             <p>Uninterrupted Views of the Arabian Sea</p>
           </div>
-          <div className="flex gap-3  items-center font-medium">
+          <div className="flex gap-3 items-center text-left font-medium">
             <img
               src="/assets/helight/designed-icon.webp"
               className="w-16 "
@@ -27,7 +27,7 @@ const Helight = () => {
             />
             <p>Designed by world known Hafeez Contractor, HBA, Singapore</p>
           </div>
-          <div className="flex gap-3  items-center font-medium">
+          <div className="flex gap-3  items-center  text-left font-medium">
             <img
               src="/assets/helight/located-icon.webp"
               className="w-16 "
@@ -35,7 +35,7 @@ const Helight = () => {
             />
             <p>Located right next to MTHL in Sewri</p>
           </div>
-          <div className="flex gap-3  items-center font-medium">
+          <div className="flex gap-3  items-center  text-left font-medium">
             <img
               src="/assets/helight/retail-icon.webp"
               className="w-16 "
@@ -43,7 +43,7 @@ const Helight = () => {
             />
             <p>World Class Retail</p>
           </div>
-          <div className="flex gap-3  items-center font-medium">
+          <div className="flex gap-3  items-center  text-left font-medium">
             <img
               src="/assets/helight/sky-club-icon.webp"
               className="w-16 "
@@ -51,7 +51,7 @@ const Helight = () => {
             />
             <p>Sky Club on 62nd floor</p>
           </div>
-          <div className="flex gap-3  items-center font-medium">
+          <div className="flex gap-3  items-center  text-left font-medium">
             <img
               src="/assets/helight/well-connected-icon.webp"
               className="w-16 "

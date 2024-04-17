@@ -121,7 +121,7 @@ export default function Home({ params }) {
                         Amenities
                       </li>
                     </Link>
-                    <Link href="../#agllery">
+                    <Link href="../#gallery">
                       <li className="my-2 p-2 font-bold rounded-sm  transition-all duration-300 hover:translate-x-2 hover:bg-white hover:text-[#7B4749]">
                         Gallery
                       </li>

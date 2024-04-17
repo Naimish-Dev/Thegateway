@@ -5,7 +5,7 @@ import { FaList } from "react-icons/fa";
 const index = () => {
   return (
     <div>
-      <div className="fixed z-10 top-0 left-0 w-screen text-white bg-black/50 py-4 px-2 bg-opacity-30">
+      <div className="fixed z-10 top-0 left-0 w-screen  text-white bg-black/50 py-4 px-2 bg-opacity-30">
         <div className="flex justify-between items-center ">
           <div>
             <Link href={"/"}>
@@ -47,7 +47,7 @@ const index = () => {
           </div>
         </div>
       </div>
-      <section className="min-h-[calc(100vh_-_87px)]  flex justify-center items-center bg-[#DBDFD7] ">
+      <section className="min-h-[calc(100vh_-_87px)]  flex justify-center items-center dark:text-black bg-[#DBDFD7] ">
         <div className="container max-w-screen-xl px-2 mx-auto py-14 md:px-8">
           <div>
             <h3 className="mb-5 text-4xl text-center font-extrabold">

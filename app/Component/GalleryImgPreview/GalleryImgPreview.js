@@ -23,18 +23,10 @@ function GalleryImgPreview(props) {
     },
     {
       img: "/assets/Gallery/Sewri-Entrance-Lobby-IMG-1.jpg",
-      title: "Entrance Lobby",
+      title: "Entrance Hall",
     },
     {
       img: "/assets/Gallery/gi1.jpg",
-      title: "Entrance Lobby",
-    },
-    {
-      img: "/assets/Gallery/gi2.jpg",
-      title: "Entrance Lobby",
-    },
-    {
-      img: "/assets/Gallery/gi3.jpg",
       title: "Entrance Lobby",
     },
   ]);
@@ -55,7 +47,7 @@ function GalleryImgPreview(props) {
 
   return (
     <div
-      className="img-grid grid grid-cols-2 sm:grid-cols-4 sm:gap-4 gap-3 m-0 p-0 w-full "
+      className="img-grid grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 sm:gap-4 gap-3 m-0 p-0 w-full "
       ref={containerRef}
       options={{
         Carousel: {

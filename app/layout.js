@@ -3,6 +3,7 @@ import "./globals.css";
 import Head from "next/head";
 import Footer from "./Component/Footer";
 import Conact from "./Component/Conact";
+import Themeproviders from "./providers";
 
 const inter = Josefin_Slab({ subsets: ["latin"] });
 
@@ -17,9 +18,15 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="favicon.png" />
       </head>
-      <body className={`${inter.className} overflow-x-hidden`} >{children}</body>
-      <Conact />
-      <Footer></Footer>
+      <Themeproviders>
+        <body
+          className={`${inter.className} overflow-x-hidden `}
+        >
+          {children}
+        </body>
+        <Conact />
+        <Footer></Footer>
+      </Themeproviders>
     </html>
   );
 }

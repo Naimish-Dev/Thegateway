@@ -13,6 +13,7 @@ module.exports = {
     },
   },
   plugins: [],
+  darkMode:'class'
 };
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 70

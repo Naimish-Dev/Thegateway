@@ -32,7 +32,7 @@ const FromSubmit = ({ CloseSucessModelHandler, isModelsucess }) => {
   }, [CloseSucessModelHandler]);
 
   const handleDownload = () => {
-    const pdfUrl = "/assets/docs/Attachment for gateway.pdf";
+    const pdfUrl = "/assets/docs/final pdf for broucher in websites.pdf";
 
     const link = document.createElement("a");
     link.href = pdfUrl;

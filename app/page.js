@@ -55,7 +55,7 @@ export default function Home() {
   const [isModel2, setIsModel2] = useState(false);
 
   const handleDownload = () => {
-    const pdfUrl = "/assets/docs/Attachment for gateway.pdf";
+    const pdfUrl = "/assets/docs/final pdf for broucher in websites.pdf";
 
     const link = document.createElement("a");
     link.href = pdfUrl;
@@ -196,10 +196,14 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <img
-            src="assets/building/Screenshot2024-02-27171122.png"
-            className="w-screen min-h-[500px] max-h-screen object-fill hidden slg:block"
-          />
+
+          <div className="slg:block relative">
+            <img
+              src="assets/building/Screenshot2024-02-27171122.png"
+              className="w-screen min-h-[500px] max-h-screen object-fill hidden slg:block"
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-black/30 "></div>
+          </div>
 
           <div className="slg:hidden relative">
             <img

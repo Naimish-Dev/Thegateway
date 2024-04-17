@@ -58,6 +58,8 @@ tbody tr:nth-child(even) {
 
 * {
   scroll-behavior: smooth;
+  scroll-snap-align: center;
+  scroll-margin-top: 100px;
 }
 
 .navigation-wrapper {

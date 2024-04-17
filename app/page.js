@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaList } from "react-icons/fa";
 import CustomModal from "./Component/CustomModal";
 import FromSubmit from "./Component/CustomModal/FromSubmit";
+import "keen-slider/keen-slider.min.css";
 
 import Sliderone from "./Component/SliderOne/sliderone";
 import Rera from "./Component/Rera/Rera";

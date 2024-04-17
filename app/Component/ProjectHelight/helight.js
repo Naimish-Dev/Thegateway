@@ -2,10 +2,7 @@ import React from "react";
 
 const Helight = () => {
   return (
-    <div
-      className="flex justify-center items-center px-2 py-10 md:py-16 bg-[#D6CDBE] dark:text-black"
-      id="about"
-    >
+    <div className="flex justify-center items-center px-2 py-10 md:py-16 bg-[#D6CDBE] dark:text-black">
       <div className="text-center flex flex-col justify-center items-center">
         <h2 className="text-3xl font-semibold">Project Highlights</h2>
 

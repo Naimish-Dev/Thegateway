@@ -108,7 +108,7 @@ const Amenities = () => {
             >
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
-            <p>2 badminton</p>
+            <p>2 badminton courts</p>
           </div>
           <div className="flex gap-2 items-center font-medium transition-all duration-300 cursor-pointer hover:gap-3">
             <svg
@@ -118,7 +118,7 @@ const Amenities = () => {
             >
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
-            <p>1 squash</p>
+            <p>1 squash court</p>
           </div>
           <div className="flex gap-2 items-center font-medium transition-all duration-300 cursor-pointer hover:gap-3">
             <svg

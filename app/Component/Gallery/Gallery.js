@@ -18,22 +18,14 @@ const Gallery = () => {
     "/assets/Gallery/Sewri-Lift-Lobby-IMG-1.jpg",
   ];
   return (
-    <div className="flex justify-center items-center my-10" id="gallery">
+    <div
+      className="flex justify-center items-center py-10 md:py-16"
+      id="gallery"
+    >
       <div className="text-center flex flex-col justify-center items-center">
         <h2 className="text-3xl mb-4 font-semibold">Gallery</h2>
         <div className="flex gap-4 flex-wrap justify-between items-center">
-          {/* {filterProduct?.map((item) => (
-            <img
-              src={item}
-              alt="sq-sample"
-              className="object-cover md:w-[200px] mx-auto h-auto rounded aspect-square"
-              onError={(e) =>
-                (e.target.src =
-                  "https://ucarecdn.com/b035f4fd-d55a-446f-843c-62715ff7f984/-/preview/-/quality/smart/")
-              }
-            />
-          ))} */}
-          <GalleryImgPreview/>
+          <GalleryImgPreview />
         </div>
       </div>
     </div>

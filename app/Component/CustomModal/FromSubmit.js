@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 
-const FromSubmit = ({ CloseSucessModelHandler,isModelsucess }) => {
+const FromSubmit = ({ CloseSucessModelHandler, isModelsucess }) => {
   const model2 = useRef();
 
   useEffect(() => {
@@ -83,9 +83,9 @@ const FromSubmit = ({ CloseSucessModelHandler,isModelsucess }) => {
             Call us if you have any questions:
             <Link
               className="mt-2 font-semibold text-center text-sm sm:text-base "
-              href={`tel:+971506945852`}
+              href={`tel:+918601130113`}
             >
-              &nbsp; +971506945852
+              &nbsp; +918601130113
             </Link>
           </div>
         </form>

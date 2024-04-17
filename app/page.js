@@ -15,10 +15,7 @@ import PriseSize from "./Component/PriceSize/PriseSize";
 import Helight from "./Component/ProjectHelight/helight";
 import Amenities from "./Component/Amenities/Amenitie";
 
-export default function Home({ params }) {
-  
-  console.log(params,"params");
-
+export default function Home() {
   const mainSidebar = useRef();
   const openSidebarButton = useRef();
 
@@ -137,11 +134,6 @@ export default function Home({ params }) {
                         Location
                       </li>
                     </Link>
-                    <Link href="/Privacy-Policy">
-                      <li className="my-2 p-2 font-bold rounded-sm  transition-all duration-300 hover:translate-x-2 hover:bg-white hover:text-[#7B4749]">
-                        Privacy-Policy
-                      </li>
-                    </Link>
                   </ul>
                 </div>
                 <div className="text-sm  py-4 border-t w-full text-center border-white">
@@ -204,22 +196,10 @@ export default function Home({ params }) {
               </button>
             </div>
           </div>
-
-          <video
+          <img
+            src="assets/building/Screenshot2024-02-27171122.png"
             className="w-screen min-h-[500px] max-h-screen object-fill hidden slg:block"
-            loop
-            muted
-            autoPlay
-            poster="assets/building/Screenshot2024-02-27171122.png"
-          >
-            <source src="/assets/video/bg-video.mp4" type="video/mp4" />
-            <track
-              src="/path/to/captions.vtt"
-              kind="subtitles"
-              srcLang="en"
-              label="English"
-            />
-          </video>
+          />
 
           <div className="slg:hidden relative">
             <img

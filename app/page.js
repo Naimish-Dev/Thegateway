@@ -15,6 +15,7 @@ import Location from "./Component/Location/Location";
 import PriseSize from "./Component/PriceSize/PriseSize";
 import Helight from "./Component/ProjectHelight/helight";
 import Amenities from "./Component/Amenities/Amenitie";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function Home() {
   const mainSidebar = useRef();
@@ -79,6 +80,8 @@ export default function Home() {
 
   return (
     <div>
+      <GoogleAnalytics gaId="G-JTJP41290P" />
+
       <section>
         <div className="relative">
           <div

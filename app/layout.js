@@ -1,6 +1,5 @@
 import { Josefin_Slab, Novecento } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 import Footer from "./Component/Footer";
 import Conact from "./Component/Conact";
 import Themeproviders from "./providers";
@@ -19,9 +18,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="favicon.png" />
       </head>
       <Themeproviders>
-        <body
-          className={`${inter.className} overflow-x-hidden `}
-        >
+        <body className={`${inter.className} overflow-x-hidden `}>
           {children}
         </body>
         <Conact />

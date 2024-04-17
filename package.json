@@ -10,9 +10,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "@next/third-parties": "^14.2.1",
     "googleapis": "^134.0.0",
     "keen-slider": "^6.8.6",
-    "next": "14.2.1",
+    "next": "^14.2.1",
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",

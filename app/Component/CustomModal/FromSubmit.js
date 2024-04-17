@@ -65,7 +65,7 @@ const FromSubmit = ({ CloseSucessModelHandler,isModelsucess }) => {
           Thank you!
         </h1>
         <p className="mb-5 text-lg font-medium text-center text-white ">
-          One of our agents will contact you shortly to give you more
+          Our sales Executive will contact you shortly to give you more
           information.
         </p>
 

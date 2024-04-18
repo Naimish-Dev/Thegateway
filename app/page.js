@@ -1,21 +1,27 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { FaList } from "react-icons/fa";
-import CustomModal from "./Component/CustomModal";
-import FromSubmit from "./Component/CustomModal/FromSubmit";
-import "keen-slider/keen-slider.min.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
-import Sliderone from "./Component/SliderOne/sliderone";
 import Rera from "./Component/Rera/Rera";
+import CustomModal from "./Component/CustomModal";
 import Gallery from "./Component/Gallery/Gallery";
 import Location from "./Component/Location/Location";
-import PriseSize from "./Component/PriceSize/PriseSize";
-import Helight from "./Component/ProjectHelight/helight";
 import Amenities from "./Component/Amenities/Amenitie";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import PriseSize from "./Component/PriceSize/PriseSize";
+import Sliderone from "./Component/SliderOne/sliderone";
+import Helight from "./Component/ProjectHelight/helight";
+import FromSubmit from "./Component/CustomModal/FromSubmit";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 export default function Home() {
   const mainSidebar = useRef();
@@ -201,54 +207,140 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="slg:block relative">
-            <img
-              src="assets/building/Screenshot2024-02-27171122.png"
-              className="w-screen min-h-[500px] max-h-screen object-fill hidden slg:block"
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/30 "></div>
-          </div>
-
-          <div className="slg:hidden relative">
-            <img
-              src="/assets/video/Mobile-Masthead-The-Gateway-Sewri-IMG-3.webp"
-              className=" w-full h-screen aspect-square object-cover "
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-black/30 "></div>
-          </div>
-
-          <div className="absolute top-0 left-0 w-full h-full  flex justify-center items-center gap-4 ">
-            <div className="text-center text-white font-bold mt-32 slg:mt-36 ">
-              <div className="mx-2">
-                <h2 className="text-2xl">
-                  WHERE THE ENDLESS OCEAN MEETS AN <br />
-                  ARCHITECTURAL MASTERPIECE
-                </h2>
-                <div>
-                  <div className="flex  flex-wrap justify-center gap-x-3 sm:gap-5">
-                    <button
-                      onClick={() => {
-                        const token = sessionStorage.getItem("Token");
-                        if (token) {
-                          handleDownload();
-                        } else {
-                          setIsModel(true);
-                        }
-                      }}
-                      className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out   text-white bg-blue-800 text-sm font-extrabold leading-5 tracking-[0.21px]"
-                    >
-                      Download Broucher
-                    </button>
-                    <button
-                      onClick={() => setIsModel(true)}
-                      className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out text-gray-900 bg-[#DBDFD7] text-sm font-extrabold leading-5 tracking-[0.21px]"
-                    >
-                      Show your Interest
-                    </button>
+          <div>
+            <Swiper
+              navigation={true}
+              modules={[Navigation, Pagination]}
+              className="mySwiper"
+              pagination={true}
+            >
+              <SwiperSlide>
+                <img
+                  src="assets/building/Screenshot2024-02-27171122.png"
+                  className="w-screen h-screen object-cover hidden md:block "
+                />
+                <img
+                  src="assets/building/Screenshot2024-02-mobile-one.png"
+                  className="w-screen h-screen object-cover md:hidden block  "
+                />
+                <div className="fixed top-0 left-0 w-full h-full z-20  flex justify-center items-center gap-4 bg-black/30 ">
+                  <div className="text-center text-white font-bold mt-32 slg:mt-36 ">
+                    <div className="mx-2">
+                      <h2 className="text-2xl mx-4">
+                        WHERE THE ENDLESS OCEAN MEETS AN <br />
+                        ARCHITECTURAL MASTERPIECE
+                      </h2>
+                      <div>
+                        <div className="flex  flex-wrap justify-center gap-x-3 sm:gap-5">
+                          <button
+                            onClick={() => {
+                              const token = sessionStorage.getItem("Token");
+                              if (token) {
+                                handleDownload();
+                              } else {
+                                setIsModel(true);
+                              }
+                            }}
+                            className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out   text-white bg-blue-800 text-sm font-extrabold leading-5 tracking-[0.21px]"
+                          >
+                            Download Broucher
+                          </button>
+                          <button
+                            onClick={() => setIsModel(true)}
+                            className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out text-gray-900 bg-[#DBDFD7] text-sm font-extrabold leading-5 tracking-[0.21px]"
+                          >
+                            Show your Interest
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <img
+                  src="assets/building/WhatsApp Image 2024-04-18 at 00.21.13_50b11bdd.jpg"
+                  className="w-screen h-screen object-cover "
+                />
+                <div className="fixed top-0 left-0 w-full h-full z-20  flex justify-center items-center gap-4 bg-black/30 ">
+                  <div className="text-center text-white font-bold mt-32 slg:mt-36 ">
+                    <div className="mx-2">
+                      <h2 className="text-2xl mx-4">
+                        WHERE THE ENDLESS OCEAN MEETS AN <br />
+                        ARCHITECTURAL MASTERPIECE
+                      </h2>
+                      <div>
+                        <div className="flex  flex-wrap justify-center gap-x-3 sm:gap-5">
+                          <button
+                            onClick={() => {
+                              const token = sessionStorage.getItem("Token");
+                              if (token) {
+                                handleDownload();
+                              } else {
+                                setIsModel(true);
+                              }
+                            }}
+                            className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out   text-white bg-blue-800 text-sm font-extrabold leading-5 tracking-[0.21px]"
+                          >
+                            Download Broucher
+                          </button>
+                          <button
+                            onClick={() => setIsModel(true)}
+                            className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out text-gray-900 bg-[#DBDFD7] text-sm font-extrabold leading-5 tracking-[0.21px]"
+                          >
+                            Show your Interest
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>{" "}
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="assets/building/Screenshot2024-02-27171019.png"
+                  className="w-screen h-screen object-cover hidden md:block"
+                />
+                <img
+                  src="assets/building/WhatsApp Image mobile two.jpg"
+                  className="w-screen h-screen object-cover md:hidden block "
+                />
+                <div className="fixed top-0 left-0 w-full h-full z-20  flex justify-center items-center gap-4 bg-black/30 ">
+                  <div className="text-center text-white font-bold mt-32 slg:mt-36 ">
+                    <div className="mx-2">
+                      <h2 className="text-2xl mx-4">
+                        WHERE THE ENDLESS OCEAN MEETS AN <br />
+                        ARCHITECTURAL MASTERPIECE
+                      </h2>
+                      <div>
+                        <div className="flex  flex-wrap justify-center gap-x-3 sm:gap-5">
+                          <button
+                            onClick={() => {
+                              const token = sessionStorage.getItem("Token");
+                              if (token) {
+                                handleDownload();
+                              } else {
+                                setIsModel(true);
+                              }
+                            }}
+                            className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out   text-white bg-blue-800 text-sm font-extrabold leading-5 tracking-[0.21px]"
+                          >
+                            Download Broucher
+                          </button>
+                          <button
+                            onClick={() => setIsModel(true)}
+                            className="uppercase mt-5 px-3 py-3  hover:scale-105 transition-all duration-300 ease-in-out text-gray-900 bg-[#DBDFD7] text-sm font-extrabold leading-5 tracking-[0.21px]"
+                          >
+                            Show your Interest
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>{" "}
+              </SwiperSlide>
+            </Swiper>
           </div>
 
           {isModel && !isModel2 && (

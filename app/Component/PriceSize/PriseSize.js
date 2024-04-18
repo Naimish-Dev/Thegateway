@@ -22,9 +22,9 @@ const PriseSize = ({ setIsModel }) => {
           </thead>
           <tbody className="font-bold">
             <tr>
-              <td className={`px-2 sm:px-5 py-2 text-sm`}>3 BHK City </td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>1258.3 Sq.ft. </td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 5.70 Cr All in</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm`}>3 BHK (City View) </td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>1250 Sq.ft. </td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 5.9 Cr All in</td>
               <td className={`px-2 sm:px-5 py-2 text-sm `}>
                 <button
                   onClick={() => {
@@ -36,9 +36,9 @@ const PriseSize = ({ setIsModel }) => {
               </td>
             </tr>
             <tr>
-              <td className={`px-2 sm:px-5 py-2 text-sm`}>3 BHK Sea</td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>1444.9 Sq.ft. </td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 6.75 Cr All in</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm`}>3 BHK (Sea View)</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>1450 Sq.ft. </td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 6.2 Cr All in</td>
               <td className={`px-2 sm:px-5 py-2 text-sm  `}>
                 <button
                   onClick={() => {
@@ -50,9 +50,9 @@ const PriseSize = ({ setIsModel }) => {
               </td>
             </tr>
             <tr>
-              <td className={`px-2 sm:px-5 py-2 text-sm`}>4 BHK Sea</td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>1905.1 Sq.ft.</td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 9.07 Cr All in</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm`}>4 BHK (Sea View)</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>1900 Sq.ft.</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 9.5 Cr All in</td>
               <td className={`px-2 sm:px-5 py-2 text-sm `}>
                 <button
                   onClick={() => {
@@ -64,9 +64,9 @@ const PriseSize = ({ setIsModel }) => {
               </td>
             </tr>
             <tr>
-              <td className={`px-2 sm:px-5 py-2 text-sm`}>4.5 BHK Sea</td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>2251.5 Sq.ft.</td>
-              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 11 Cr All in </td>
+              <td className={`px-2 sm:px-5 py-2 text-sm`}>4.5 BHK (Sea View)</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>2250 Sq.ft.</td>
+              <td className={`px-2 sm:px-5 py-2 text-sm `}>₹ 11.5 Cr All in </td>
               <td className={`px-2 sm:px-5 py-2 text-sm `}>
                 <button
                   onClick={() => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Location = ({ setIsModel }) => {
   return (
@@ -22,9 +22,7 @@ const Location = ({ setIsModel }) => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15089.679881231741!2d72.853988!3d19.001207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfb19bcaa7f9%3A0x7e82e2d83a779a90!2sL%26T%20Realty%20The%20Gateway%2C%20Sewri!5e0!3m2!1sen!2sin!4v1713094315942!5m2!1sen!2sin"
               className=" w-full h-full min-h-[300px]"
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
 
@@ -94,4 +92,4 @@ const Location = ({ setIsModel }) => {
   );
 };
 
-export default Location
+export default Location;

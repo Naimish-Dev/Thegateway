@@ -114,3 +114,18 @@ tbody tr:nth-child(even) {
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
 }
+
+.mySwiper .swiper-slide {
+    @apply !h-auto;
+  }
+  .mySwiper .swiper-button-prev,
+  .mySwiper .swiper-button-next {
+    @apply w-8 h-8 sm:w-10 sm:h-10 transition-all duration-300 ease-in-out border-solid rounded-full backdrop-blur-sm bg-white/20 hover:border-black/20;
+  }
+  .mySwiper .swiper-button-prev:after,
+  .mySwiper .swiper-button-next:after {
+    @apply text-lg sm:text-xl text-[#D6CDBE] transition-all duration-300 ease-in-out hover:text-black/50;
+  }
+   .mySwiper .swiper-pagination-bullet {
+    @apply !bg-[#D6CDBE];
+  }

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 const Sliderone = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

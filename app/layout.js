@@ -7,7 +7,7 @@ import Themeproviders from "./providers";
 const inter = Josefin_Slab({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "THE GATEWAY",
+  title: "a",
   description: "L&T Realty - The Gateway sewri in mumbai",
 };
 
